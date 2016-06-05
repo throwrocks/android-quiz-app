@@ -1,3 +1,43 @@
 <resources>
-    <string name="app_name">android-quiz-app</string>
+    <string name="app_name">Science Quiz</string>
+
+    <string name="question1">1. What is Deoxyribonucleic acid commonly referred to as?</string>
+    <string name="question1_choice1">RNA</string>
+    <string name="question1_choice2">CIA</string>
+    <string name="question1_choice3">DNA</string>
+
+    <string name="question2">2. What process involves treating rubber with sulfur to harden it?</string>
+
+    <string name="question3">3. Name two different organelles of a eukaryotic cell.</string>
+    <string name="question3_choice1">Ribosome</string>
+    <string name="question3_choice2">Plasmids</string>
+    <string name="question3_choice3">Golgi apparatus</string>
+    <string name="question3_choice4">Diploid</string>
+
+    <string name="question4">4. This word describes the force that pulls objects to the middle of the earth?</string>
+
+    <string name="question5">5 What type of trees yield the resin used to produce turpentine?</string>
+    <string name="question5_choice1">Palm trees</string>
+    <string name="question5_choice2">Pine trees</string>
+    <string name="question5_choice3">Oak trees</string>
+
+    <string name="question6">6. Cumulus and Cirrus are types of what?</string>
+
+    <string name="question7">7. Which two planets have one or more moons?</string>
+    <string name="question7_choice1">Ceres</string>
+    <string name="question7_choice2">Mercury</string>
+    <string name="question7_choice3">Earth</string>
+    <string name="question7_choice4">Pluto</string>
+
+    <string name="question8">8. Where in the human body would you find the scaphoid bone?</string>
+
+    <string name="question9">9. Which grow upwards Stalactites or Stalagmites?</string>
+    <string name="question9_choice1">Stalactites</string>
+    <string name="question9_choice2">Stalagmites</string>
+
+    <string name="question10">10. What process involves heating an ore to obtain a metal?</string>
+
+    <string name="submit_answers">Submit Answers</string>
+
+
 </resources>
