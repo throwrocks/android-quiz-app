@@ -114,6 +114,7 @@
             android:id="@+id/question4_answer"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
             android:inputType="text" />
 
         <TextView
@@ -164,6 +165,7 @@
             android:id="@+id/question6_answer"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
             android:inputType="text" />
 
         <TextView
@@ -216,6 +218,7 @@
             android:id="@+id/question8_answer"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
             android:inputType="text" />
 
         <TextView
@@ -260,6 +263,7 @@
             android:id="@+id/question10_answer"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
             android:inputType="text" />
 
         <Button

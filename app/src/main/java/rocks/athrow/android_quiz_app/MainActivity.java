@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
@@ -249,11 +250,16 @@ public class MainActivity extends AppCompatActivity {
         final_score = answer1_score + answer2_score + answer3_score + answer4_score + answer5_score +
         answer6_score + answer7_score + answer8_score + answer9_score + answer10_score;
 
-        resultsDisplay = Integer.toString(final_score);
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
+        if ( final_score == 10 ){
+            resultsDisplay = "Perfect! You scored 10 out of 10";
+        }else{
+            resultsDisplay = "Try again. You scored " + final_score + " our of 10";
+        }
 
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_LONG;
         Toast toast = Toast.makeText(context, resultsDisplay, duration);
+        toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
 }
