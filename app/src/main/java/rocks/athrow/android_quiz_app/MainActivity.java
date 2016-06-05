@@ -127,9 +127,127 @@ public class MainActivity extends AppCompatActivity {
             answer4_score = 0;
         }
         //------------------------------------------------------------------------------------------
+        // Question 5  - Correct Answers is #2 "Pine trees"
+        //------------------------------------------------------------------------------------------
+        Boolean answer5;
+
+        RadioButton question5_choice2 = (RadioButton) this.findViewById(R.id.question5_choice2);
+        if (question5_choice2 != null) {
+            answer5 = question5_choice2.isChecked();
+        } else {
+            answer5 = null;
+        }
+        if (answer5 == null || !answer5) {
+            answer5_score = 0;
+        } else {
+            answer5_score = 1;
+        }
+        //------------------------------------------------------------------------------------------
+        // Question 6 - Correct Answer is "Clouds" or "Cloud"
+        //------------------------------------------------------------------------------------------
+        String answer6;
+        EditText question6_answer = (EditText) this.findViewById(R.id.question6_answer);
+        if (question6_answer != null) {
+            answer6 = question6_answer.getText().toString().toLowerCase();
+        } else {
+            answer6 = "";
+        }
+        if (answer6.equals("clouds") || answer6.equals("cloud")) {
+            answer6_score = 1;
+        } else {
+            answer6_score = 0;
+        }
+        //------------------------------------------------------------------------------------------
+        // Question 7  - Correct Answers are #3 (Earth) and #4 (Pluto)
+        //------------------------------------------------------------------------------------------
+        Boolean answer7_choice1;
+        Boolean answer7_choice2;
+        Boolean answer7_choice3;
+        Boolean answer7_choice4;
+        CheckBox question7_choice1 = (CheckBox) this.findViewById(R.id.question7_choice1);
+        CheckBox question7_choice2 = (CheckBox) this.findViewById(R.id.question7_choice2);
+        CheckBox question7_choice3 = (CheckBox) this.findViewById(R.id.question7_choice3);
+        CheckBox question7_choice4 = (CheckBox) this.findViewById(R.id.question7_choice4);
+        if (question7_choice1 != null) {
+            answer7_choice1 = question7_choice1.isChecked();
+        } else {
+            answer7_choice1 = null;
+        }
+        if (question2_choice2 != null) {
+            answer7_choice2 = question7_choice2.isChecked();
+        } else {
+            answer7_choice2 = null;
+        }
+        if (question3_choice3 != null) {
+            answer7_choice3 = question7_choice3.isChecked();
+        } else {
+            answer7_choice3 = null;
+        }
+        if (question3_choice4 != null) {
+            answer7_choice4 = question7_choice4.isChecked();
+        } else {
+            answer7_choice4 = null;
+        }
+        if ((answer7_choice1 == null || !answer7_choice1) &&
+                (answer7_choice2 == null || !answer7_choice2) &&
+                (answer7_choice3 != null && answer7_choice3) &&
+                (answer7_choice4 != null && answer7_choice4)
+                ) {
+            answer7_score = 1;
+        } else {
+            answer7_score = 0;
+        }
+        //------------------------------------------------------------------------------------------
+        // Question 8 - Correct Answer is "Wrist"
+        //------------------------------------------------------------------------------------------
+        String answer8;
+        EditText question8_answer = (EditText) this.findViewById(R.id.question8_answer);
+        if (question8_answer != null) {
+            answer8 = question8_answer.getText().toString().toLowerCase();
+        } else {
+            answer8 = "";
+        }
+        if (answer8.equals("wrist")) {
+            answer8_score = 1;
+        } else {
+            answer8_score = 0;
+        }
+        //------------------------------------------------------------------------------------------
+        // Question 9  - Correct Answers is #2 "Stalagmites"
+        //------------------------------------------------------------------------------------------
+        Boolean answer9;
+
+        RadioButton question9_choice2 = (RadioButton) this.findViewById(R.id.question9_choice2);
+        if (question9_choice2 != null) {
+            answer9 = question9_choice2.isChecked();
+        } else {
+            answer9 = null;
+        }
+        if (answer9 == null || !answer5) {
+            answer9_score = 0;
+        } else {
+            answer9_score = 1;
+        }
+        //------------------------------------------------------------------------------------------
+        // Question 10 - Correct Answer is "Smelting"
+        //------------------------------------------------------------------------------------------
+        String answer10;
+        EditText question10_answer = (EditText) this.findViewById(R.id.question10_answer);
+        if (question10_answer != null) {
+            answer10 = question10_answer.getText().toString().toLowerCase();
+        } else {
+            answer10 = "";
+        }
+        if (answer10.equals("smelting")) {
+            answer10_score = 1;
+        } else {
+            answer10_score = 0;
+        }
+        //------------------------------------------------------------------------------------------
         // Final Score
         //------------------------------------------------------------------------------------------
-        final_score = answer1_score + answer2_score + answer3_score + answer4_score;
+        final_score = answer1_score + answer2_score + answer3_score + answer4_score + answer5_score +
+        answer6_score + answer7_score + answer8_score + answer9_score + answer10_score;
 
         resultsDisplay = Integer.toString(final_score);
         Context context = getApplicationContext();
