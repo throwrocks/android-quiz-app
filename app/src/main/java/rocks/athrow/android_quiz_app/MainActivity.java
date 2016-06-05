@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             answer9 = null;
         }
-        if (answer9 == null || !answer5) {
+        if (answer9 == null || !answer9) {
             answer9_score = 0;
         } else {
             answer9_score = 1;
