@@ -16,6 +16,32 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    // Question 1
+    RadioButton question1_choice3;
+    // Question 2
+    EditText question2_answer;
+    // Question 3
+    CheckBox question3_choice1;
+    CheckBox question2_choice2;
+    CheckBox question3_choice3;
+    CheckBox question3_choice4;
+    // Question 4
+    EditText question4_answer;
+    // Question 5
+    RadioButton question5_choice2;
+    // Question 6
+    EditText question6_answer;
+    // Question 7
+    CheckBox question7_choice1;
+    CheckBox question7_choice2;
+    CheckBox question7_choice3;
+    CheckBox question7_choice4;
+    // Question 8
+    EditText question8_answer;
+    // Question 9
+    RadioButton question9_choice2;
+    // Question 10
+    EditText question10_answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,27 +72,19 @@ public class MainActivity extends AppCompatActivity {
         //------------------------------------------------------------------------------------------
         Boolean answer1;
 
-        RadioButton question1_choice3 = (RadioButton) this.findViewById(R.id.question1_choice3);
-        if (question1_choice3 != null) {
-            answer1 = question1_choice3.isChecked();
-        } else {
-            answer1 = null;
-        }
-        if (answer1 == null || !answer1) {
-            answer1_score = 0;
-        } else {
+        question1_choice3 = (RadioButton) this.findViewById(R.id.question1_choice3);
+        answer1 = question1_choice3.isChecked();
+        if (answer1) {
             answer1_score = 1;
+        } else {
+            answer1_score = 0;
         }
         //------------------------------------------------------------------------------------------
         // Question 2 - Correct Answer is "Vulcanizing"
         //------------------------------------------------------------------------------------------
         String answer2;
-        EditText question2_answer = (EditText) this.findViewById(R.id.question2_answer);
-        if (question2_answer != null) {
-            answer2 = question2_answer.getText().toString().toLowerCase();
-        } else {
-            answer2 = "";
-        }
+        question2_answer = (EditText) this.findViewById(R.id.question2_answer);
+        answer2 = question2_answer.getText().toString().toLowerCase();
         if (answer2.equals("vulcanizing")) {
             answer2_score = 1;
         } else {
@@ -79,35 +97,15 @@ public class MainActivity extends AppCompatActivity {
         Boolean answer3_choice2;
         Boolean answer3_choice3;
         Boolean answer3_choice4;
-        CheckBox question3_choice1 = (CheckBox) this.findViewById(R.id.question3_choice1);
-        CheckBox question2_choice2 = (CheckBox) this.findViewById(R.id.question3_choice2);
-        CheckBox question3_choice3 = (CheckBox) this.findViewById(R.id.question3_choice3);
-        CheckBox question3_choice4 = (CheckBox) this.findViewById(R.id.question3_choice4);
-        if (question3_choice1 != null) {
-            answer3_choice1 = question3_choice1.isChecked();
-        } else {
-            answer3_choice1 = null;
-        }
-        if (question2_choice2 != null) {
-            answer3_choice2 = question2_choice2.isChecked();
-        } else {
-            answer3_choice2 = null;
-        }
-        if (question3_choice3 != null) {
-            answer3_choice3 = question3_choice3.isChecked();
-        } else {
-            answer3_choice3 = null;
-        }
-        if (question3_choice4 != null) {
-            answer3_choice4 = question3_choice4.isChecked();
-        } else {
-            answer3_choice4 = null;
-        }
-        if ((answer3_choice1 != null && answer3_choice1) &&
-                (answer3_choice2 == null || !answer3_choice2) &&
-                (answer3_choice3 != null && answer3_choice3) &&
-                (answer3_choice4 == null || !answer3_choice4)
-                ) {
+        question3_choice1 = (CheckBox) this.findViewById(R.id.question3_choice1);
+        question2_choice2 = (CheckBox) this.findViewById(R.id.question3_choice2);
+        question3_choice3 = (CheckBox) this.findViewById(R.id.question3_choice3);
+        question3_choice4 = (CheckBox) this.findViewById(R.id.question3_choice4);
+        answer3_choice1 = question3_choice1.isChecked();
+        answer3_choice2 = question2_choice2.isChecked();
+        answer3_choice3 = question3_choice3.isChecked();
+        answer3_choice4 = question3_choice4.isChecked();
+        if (answer3_choice1 && !answer3_choice2 && answer3_choice3 && !answer3_choice4) {
             answer3_score = 1;
         } else {
             answer3_score = 0;
@@ -116,12 +114,8 @@ public class MainActivity extends AppCompatActivity {
         // Question 4 - Correct Answer is "Gravity"
         //------------------------------------------------------------------------------------------
         String answer4;
-        EditText question4_answer = (EditText) this.findViewById(R.id.question4_answer);
-        if (question4_answer != null) {
-            answer4 = question4_answer.getText().toString().toLowerCase();
-        } else {
-            answer4 = "";
-        }
+        question4_answer = (EditText) this.findViewById(R.id.question4_answer);
+        answer4 = question4_answer.getText().toString().toLowerCase();
         if (answer4.equals("gravity")) {
             answer4_score = 1;
         } else {
@@ -131,28 +125,19 @@ public class MainActivity extends AppCompatActivity {
         // Question 5  - Correct Answers is #2 "Pine trees"
         //------------------------------------------------------------------------------------------
         Boolean answer5;
-
-        RadioButton question5_choice2 = (RadioButton) this.findViewById(R.id.question5_choice2);
-        if (question5_choice2 != null) {
-            answer5 = question5_choice2.isChecked();
-        } else {
-            answer5 = null;
-        }
-        if (answer5 == null || !answer5) {
-            answer5_score = 0;
-        } else {
+        question5_choice2 = (RadioButton) this.findViewById(R.id.question5_choice2);
+        answer5 = question5_choice2.isChecked();
+        if (answer5) {
             answer5_score = 1;
+        } else {
+            answer5_score = 0;
         }
         //------------------------------------------------------------------------------------------
         // Question 6 - Correct Answer is "Clouds" or "Cloud"
         //------------------------------------------------------------------------------------------
         String answer6;
-        EditText question6_answer = (EditText) this.findViewById(R.id.question6_answer);
-        if (question6_answer != null) {
-            answer6 = question6_answer.getText().toString().toLowerCase();
-        } else {
-            answer6 = "";
-        }
+        question6_answer = (EditText) this.findViewById(R.id.question6_answer);
+        answer6 = question6_answer.getText().toString().toLowerCase();
         if (answer6.equals("clouds") || answer6.equals("cloud")) {
             answer6_score = 1;
         } else {
@@ -165,35 +150,15 @@ public class MainActivity extends AppCompatActivity {
         Boolean answer7_choice2;
         Boolean answer7_choice3;
         Boolean answer7_choice4;
-        CheckBox question7_choice1 = (CheckBox) this.findViewById(R.id.question7_choice1);
-        CheckBox question7_choice2 = (CheckBox) this.findViewById(R.id.question7_choice2);
-        CheckBox question7_choice3 = (CheckBox) this.findViewById(R.id.question7_choice3);
-        CheckBox question7_choice4 = (CheckBox) this.findViewById(R.id.question7_choice4);
-        if (question7_choice1 != null) {
-            answer7_choice1 = question7_choice1.isChecked();
-        } else {
-            answer7_choice1 = null;
-        }
-        if (question2_choice2 != null) {
-            answer7_choice2 = question7_choice2.isChecked();
-        } else {
-            answer7_choice2 = null;
-        }
-        if (question3_choice3 != null) {
-            answer7_choice3 = question7_choice3.isChecked();
-        } else {
-            answer7_choice3 = null;
-        }
-        if (question3_choice4 != null) {
-            answer7_choice4 = question7_choice4.isChecked();
-        } else {
-            answer7_choice4 = null;
-        }
-        if ((answer7_choice1 == null || !answer7_choice1) &&
-                (answer7_choice2 == null || !answer7_choice2) &&
-                (answer7_choice3 != null && answer7_choice3) &&
-                (answer7_choice4 != null && answer7_choice4)
-                ) {
+        question7_choice1 = (CheckBox) this.findViewById(R.id.question7_choice1);
+        question7_choice2 = (CheckBox) this.findViewById(R.id.question7_choice2);
+        question7_choice3 = (CheckBox) this.findViewById(R.id.question7_choice3);
+        question7_choice4 = (CheckBox) this.findViewById(R.id.question7_choice4);
+        answer7_choice1 = question7_choice1.isChecked();
+        answer7_choice2 = question7_choice2.isChecked();
+        answer7_choice3 = question7_choice3.isChecked();
+        answer7_choice4 = question7_choice4.isChecked();
+        if (!answer7_choice1 && !answer7_choice2 && answer7_choice3 && answer7_choice4) {
             answer7_score = 1;
         } else {
             answer7_score = 0;
@@ -202,12 +167,8 @@ public class MainActivity extends AppCompatActivity {
         // Question 8 - Correct Answer is "Wrist"
         //------------------------------------------------------------------------------------------
         String answer8;
-        EditText question8_answer = (EditText) this.findViewById(R.id.question8_answer);
-        if (question8_answer != null) {
-            answer8 = question8_answer.getText().toString().toLowerCase();
-        } else {
-            answer8 = "";
-        }
+        question8_answer = (EditText) this.findViewById(R.id.question8_answer);
+        answer8 = question8_answer.getText().toString().toLowerCase();
         if (answer8.equals("wrist")) {
             answer8_score = 1;
         } else {
@@ -217,28 +178,19 @@ public class MainActivity extends AppCompatActivity {
         // Question 9  - Correct Answers is #2 "Stalagmites"
         //------------------------------------------------------------------------------------------
         Boolean answer9;
-
-        RadioButton question9_choice2 = (RadioButton) this.findViewById(R.id.question9_choice2);
-        if (question9_choice2 != null) {
-            answer9 = question9_choice2.isChecked();
-        } else {
-            answer9 = null;
-        }
-        if (answer9 == null || !answer9) {
-            answer9_score = 0;
-        } else {
+        question9_choice2 = (RadioButton) this.findViewById(R.id.question9_choice2);
+        answer9 = question9_choice2.isChecked();
+        if (answer9) {
             answer9_score = 1;
+        } else {
+            answer9_score = 0;
         }
         //------------------------------------------------------------------------------------------
         // Question 10 - Correct Answer is "Smelting"
         //------------------------------------------------------------------------------------------
         String answer10;
-        EditText question10_answer = (EditText) this.findViewById(R.id.question10_answer);
-        if (question10_answer != null) {
-            answer10 = question10_answer.getText().toString().toLowerCase();
-        } else {
-            answer10 = "";
-        }
+        question10_answer = (EditText) this.findViewById(R.id.question10_answer);
+        answer10 = question10_answer.getText().toString().toLowerCase();
         if (answer10.equals("smelting")) {
             answer10_score = 1;
         } else {
@@ -248,12 +200,12 @@ public class MainActivity extends AppCompatActivity {
         // Final Score
         //------------------------------------------------------------------------------------------
         final_score = answer1_score + answer2_score + answer3_score + answer4_score + answer5_score +
-        answer6_score + answer7_score + answer8_score + answer9_score + answer10_score;
+                answer6_score + answer7_score + answer8_score + answer9_score + answer10_score;
 
-        if ( final_score == 10 ){
+        if (final_score == 10) {
             resultsDisplay = "Perfect! You scored 10 out of 10";
-        }else{
-            resultsDisplay = "Try again. You scored " + final_score + " our of 10";
+        } else {
+            resultsDisplay = "Try again. You scored " + final_score + " out of 10";
         }
 
         Context context = getApplicationContext();
