@@ -1,8 +1,8 @@
 # android-quiz-app
 
-I developed this project as part of the Udacity Code Reviewer course.
+I developed this project as part of the Udacity Code Reviewer training.
 
-The requirements were to create a quiz layout with at least four different Views, and a method that verifies the answers and displays the final results in a Toast. I chose to present ten questionsa about science in a combination of free text answers and multiple choice answers. 
+The requirements were to create a quiz layout with at least four different Views, and a method that verifies the answers and displays the final results in a Toast. I chose to present ten questions about science in a combination of free text answers and multiple choice answers. 
 
 
 ![ScreenShot](http://throw.rocks/android-projects/quizz-app/quizz-app.png)
